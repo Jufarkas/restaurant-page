@@ -1,0 +1,55 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('./Roboto-Regular.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'JosefinSans';
+    src: url('./JosefinSans-VariableFont_wght.ttf');
+    font-weight: 600;
+    font-style: normal;
+}
+
+
+
+body{
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-image: url(./cafe-background.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: black;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+h1 {
+    font-family: 'JosefinSans', Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #9b6e3d;
+    font-size: 6vw;
+    padding-top: 16px;
+    margin: 12px 0 5px 0;
+    background-color: black;
+}
+
+.footer {
+    font-size: 10px;
+    position: absolute;
+    text-align: center;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 225px;
+}
