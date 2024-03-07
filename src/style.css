@@ -27,6 +27,12 @@ body{
     background-color: black;
 }
 
+.header {
+    position: sticky;
+    top: 0;
+    margin: 0;
+}
+
 nav {
     display: flex;
     justify-content: space-evenly;
@@ -35,21 +41,86 @@ nav {
 h1 {
     font-family: 'JosefinSans', Arial, Helvetica, sans-serif;
     text-align: center;
-    color: #9b6e3d;
-    font-size: 6vw;
+    color: #79573b;
+    font-size: 5vw;
     padding-top: 16px;
-    margin: 12px 0 5px 0;
-    background-color: black;
+    margin: 0;
+    background-color: #000000e0;
+}
+
+h3 {
+    margin: 0 0 12px;
+    padding: 0 0 6px;
+    border: 0;
+    background-color: #000000e0;
+    color: white;
+    text-align: center;
+    font-size: calc(10px + 1vw);
+}
+
+.content {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content p {
+    margin: 0;
+    padding: 15px;
+    background-color: #000000e5;
+    color: #f5deb3;
+    font-size: calc(12px + 0.9vw);
+    max-width: 600px;
+}
+
+.hours {
+    margin-top: 20px;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 15px;
+    background-color: #000000e5;
+    color: #f5deb3;
+    font-size: calc(12px + 0.9vw);
+    max-width: 100vw;
+}
+
+ul li {
+    min-width: 600px;
+    text-align: center;
+}
+
+h4 {
+    margin-top: 0;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.location {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #000000e5;
+    color: #f5deb3;
+    font-size: calc(12px + 0.9vw);
+    width: 100vw;
+    max-width: 600px;
+}
+
+.location p {
+    background: none;
+    text-align: center;
+    padding: 0;
 }
 
 .footer {
     font-size: 10px;
-    position: absolute;
+    position: fixed;
     text-align: center;
-    left: 0;
     right: 0;
     bottom: 0;
-    margin-left: auto;
-    margin-right: auto;
-    width: 225px;
+    width: 180px;
 }
