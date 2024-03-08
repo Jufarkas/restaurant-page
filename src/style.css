@@ -46,7 +46,22 @@ nav {
     display: flex;
     justify-content: space-evenly;
     background-color: #876750;
-    height: 30px;
+    height: 40px;
+}
+
+button {
+    font-family: 'JosefinSans';
+    font-size: calc(14px + 0.8vw);
+    outline-style: none;
+    border-style: none;
+    height: 40px;
+    width: 130px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #000000e0;
+    color: #876750;
 }
 
 h1 {
