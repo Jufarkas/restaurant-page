@@ -12,8 +12,6 @@
     font-style: normal;
 }
 
-
-
 body {
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
     margin: 0;
@@ -33,15 +31,6 @@ body {
     margin: 0;
 }
 
-.footer {
-    font-size: 10px;
-    position: fixed;
-    text-align: center;
-    right: 0;
-    bottom: 0;
-    width: 180px;
-}
-
 nav {
     display: flex;
     justify-content: space-evenly;
@@ -56,11 +45,13 @@ button {
     border-style: none;
     height: 40px;
     width: 130px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
 }
 
 button:hover {
     cursor: pointer;
-    background-color: #000000e0;
+    background-color: #000000f0;
     color: #876750;
 }
 
@@ -71,14 +62,14 @@ h1 {
     font-size: 5vw;
     padding-top: 16px;
     margin: 0;
-    background-color: #000000e0;
+    background-color: #000000f0;
 }
 
 h3 {
     margin: 0;
     padding: 0 0 6px;
     border: 0;
-    background-color: #000000e0;
+    background-color: #000000f0;
     color: white;
     text-align: center;
     font-size: calc(8px + 1vw);
@@ -96,7 +87,8 @@ h4 {
 .content {
     margin-top: 20px;
     display: grid;
-    grid-template: 2fr 2fr 1fr / 1fr 4fr 1fr;
+    grid-template: 2fr 3fr 1fr / 1fr 4fr 1fr;
+    row-gap: 5px;
     justify-items: center;
     align-items: center;
 }
@@ -111,7 +103,7 @@ p {
     word-spacing: 4px;
     margin: 0;
     padding: 15px;
-    background-color: #000000e5;
+    background-color: #000000f0;
     color: #ffffff;
     font-size: calc(12px + 0.6vw);
 }
@@ -127,12 +119,11 @@ table {
     align-items: center;
     margin: 0;
     padding: 15px 0;
-    background-color: #000000e5;
+    background-color: #000000f0;
     width: 100vw;
     font-size: calc(12px + 0.6vw);
     min-width: 500px;
     max-width: 600px;
-    text-align: center;
     color: #ffffff;
     word-spacing: 10px;
     letter-spacing: 1px;
@@ -151,12 +142,17 @@ th {
     text-align: start;
 }
 
+tr {
+    gap: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+
 .location {
     grid-area: 3 / 2;
-    margin-top: 20px;
     margin-bottom: 5px;
     padding: 15px 0;
-    background-color: #000000e5;
+    background-color: #000000f0;
     font-size: calc(12px + 0.9vw);
     width: 100vw;
     max-width: 600px;
@@ -165,4 +161,21 @@ th {
 .location p {
     background: none;
     padding: 0;
+}
+
+
+.footer {
+    display: flex;
+    font-size: 10px;
+    position: static;
+}
+
+.footer p {
+    background: none;
+    font-size: 12px;
+    padding: 5px;
+}
+
+.footer a {
+    text-decoration: none;
 }
