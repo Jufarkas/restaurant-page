@@ -103,7 +103,8 @@ p {
     word-spacing: 4px;
     margin: 0;
     padding: 15px;
-    background-color: #000000f0;
+    /* background-color: #000000f0; */
+    background-image: url(./wood.png);
     color: #ffffff;
     font-size: calc(12px + 0.6vw);
 }
@@ -119,7 +120,8 @@ table {
     align-items: center;
     margin: 0;
     padding: 15px 0;
-    background-color: #000000f0;
+    /* background-color: #000000f0; */
+    background-image: url(./wood.png);
     width: 100vw;
     font-size: calc(12px + 0.6vw);
     min-width: 500px;
@@ -152,7 +154,8 @@ tr {
     grid-area: 3 / 2;
     margin-bottom: 5px;
     padding: 15px 0;
-    background-color: #000000f0;
+    /* background-color: #000000f0; */
+    background-image: url(./wood.png);
     font-size: calc(12px + 0.9vw);
     width: 100vw;
     max-width: 600px;
