@@ -167,7 +167,10 @@ tr {
 .footer {
     display: flex;
     font-size: 10px;
-    position: static;
+    box-sizing: border-box;
+    height: 75px;
+    align-items: flex-end;
+    justify-content: center;
 }
 
 .footer p {
