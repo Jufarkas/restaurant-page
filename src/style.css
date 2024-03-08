@@ -50,7 +50,7 @@ nav {
 }
 
 button {
-    font-family: 'JosefinSans';
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: calc(14px + 0.8vw);
     outline-style: none;
     border-style: none;
@@ -88,6 +88,7 @@ h4 {
     color: #f5deb3;
     font-size: calc(12px + 0.9vw);
     margin-top: 0;
+    margin-bottom: 25px;
     text-align: center;
     text-decoration: underline;
 }
@@ -120,24 +121,34 @@ p {
     max-width: 600px;
 }
 
-ul {
+table {
     display: flex;
     flex-direction: column;
     align-items: center;
-    list-style: none;
     margin: 0;
     padding: 15px 0;
     background-color: #000000e5;
-    max-width: 100vw;
-}
-
-ul li {
+    width: 100vw;
     font-size: calc(12px + 0.6vw);
-    min-width: 600px;
+    min-width: 500px;
+    max-width: 600px;
     text-align: center;
     color: #ffffff;
     word-spacing: 10px;
     letter-spacing: 1px;
+}
+
+caption {
+    color: #f5deb3;
+    font-size: calc(12px + 0.9vw);
+    margin-bottom: 25px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: underline;
+}
+
+th {
+    text-align: start;
 }
 
 .location {
