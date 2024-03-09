@@ -59,7 +59,7 @@ h1 {
     font-family: 'JosefinSans', Arial, Helvetica, sans-serif;
     text-align: center;
     color: #79573b;
-    font-size: 5vw;
+    font-size: 4.3vw;
     padding-top: 16px;
     margin: 0;
     background-color: #000000f0;
@@ -72,7 +72,7 @@ h3 {
     background-color: #000000f0;
     color: white;
     text-align: center;
-    font-size: calc(8px + 1vw);
+    font-size: calc(8px + 0.6vw);
 }
 
 h4 {
@@ -102,11 +102,11 @@ p {
     text-align: center;
     word-spacing: 4px;
     margin: 0;
-    padding: 15px;
+    padding: 15px 40px;
     /* background-color: #000000f0; */
     background-image: url(./wood.png);
     color: #ffffff;
-    font-size: calc(12px + 0.6vw);
+    font-size: calc(12px + 0.5vw);
 }
 
 .hours {
@@ -117,13 +117,12 @@ p {
 table {
     display: flex;
     flex-direction: column;
-    align-items: center;
     margin: 0;
     padding: 15px 0;
     /* background-color: #000000f0; */
     background-image: url(./wood.png);
     width: 100vw;
-    font-size: calc(12px + 0.6vw);
+    font-size: calc(12px + 0.5vw);
     min-width: 500px;
     max-width: 600px;
     color: #ffffff;
@@ -145,7 +144,7 @@ th {
 }
 
 tr {
-    gap: 70px;
+    padding: 0 125px;
     display: flex;
     justify-content: space-between;
 }
