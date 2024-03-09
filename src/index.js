@@ -5,8 +5,6 @@ const mainBody = document.querySelector('body');
 // element creators
 const newDiv = document.createElement('div');
 const nav = document.createElement('nav');
-const para = document.createElement('p');
-const aElem = document.createElement('a');
 const header1 = document.createElement('h1');
 const header3 = document.createElement('h3');
 
@@ -40,7 +38,7 @@ export function createHeader() {
     headerNav.appendChild(contactBtn);
     contactBtn.classList.add('contact');
     contactBtn.textContent = "Contact";
-}
+};
 
 createHeader();
 
@@ -116,6 +114,33 @@ function createContent(){
 
     location.appendChild(header4);
     location.appendChild(para3);
-}
+};
 
 createContent();
+
+
+function createFooter(){
+    let footer = document.createElement('div');
+    footer.classList.add('footer');
+    mainBody.appendChild(footer);
+
+    let footerPara = document.createElement('p');
+    let text1 = document.createTextNode("Photo by ");
+    let text2 = document.createTextNode(" on ");
+
+    let footerA1 = document.createElement('a');
+    footerA1.href = "https://unsplash.com/@shawnanggg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash";
+    footerA1.textContent = "shawnanggg";
+    
+    let footerA2 = document.createElement('a');
+    footerA2.href = "https://unsplash.com/photos/brown-and-gray-concrete-store-nmpW_WwwVSc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash";
+    footerA2.textContent = "Unsplash";
+    
+    footer.appendChild(footerPara);
+    footerPara.appendChild(text1);
+    footerPara.appendChild(footerA1);
+    footerPara.appendChild(text2);
+    footerPara.appendChild(footerA2);
+};
+
+createFooter();
