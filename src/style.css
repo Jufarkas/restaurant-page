@@ -59,7 +59,7 @@ h1 {
     font-family: 'JosefinSans', Arial, Helvetica, sans-serif;
     text-align: center;
     color: #79573b;
-    font-size: 4.3vw;
+    font-size: calc(8px + 4.3vw);
     padding-top: 16px;
     margin: 0;
     background-color: #000000f0;
@@ -72,7 +72,7 @@ h3 {
     background-color: #000000f0;
     color: white;
     text-align: center;
-    font-size: calc(8px + 0.6vw);
+    font-size: calc(10px + 0.6vw);
 }
 
 h4 {
@@ -84,6 +84,18 @@ h4 {
     text-decoration: underline;
 }
 
+p {
+    text-align: center;
+    word-spacing: 4px;
+    margin: 0;
+    padding: 15px 40px;
+    /* background-color: #000000f0; */
+    background-image: url(./wood.png);
+    color: #ffffff;
+    font-size: calc(12px + 0.5vw);
+}
+
+/* HOME PAGE STYLING */
 .content {
     margin-top: 20px;
     display: grid;
@@ -96,17 +108,6 @@ h4 {
 .intro {
     grid-area: 1 / 2;
     max-width: 600px;
-}
-
-p {
-    text-align: center;
-    word-spacing: 4px;
-    margin: 0;
-    padding: 15px 40px;
-    /* background-color: #000000f0; */
-    background-image: url(./wood.png);
-    color: #ffffff;
-    font-size: calc(12px + 0.5vw);
 }
 
 .hours {
@@ -166,6 +167,219 @@ tr {
 }
 
 
+/* MENU PAGE STYLING  */
+.menuContainer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.cardColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.card {
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    width: 480px;
+    height: 350px;
+    background-image: url(./wood.png);
+}
+
+
+.cardColumn h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    padding: 10px;
+    font-size: 1.6em;
+}
+
+.card ul {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin: 0;
+    padding-right: 25px;
+    padding-left: 0px;
+    list-style: none;
+    color: wheat;
+    font-size: 1.1em;
+    word-spacing: 3px;
+    letter-spacing: 1px;
+}
+
+
+h6 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 10px;
+    border: 0;
+    background-color: #000000f0;
+    color: white;
+    text-align: unset;
+    font-size: calc(14px + 0.2vw);
+    height: 25px;
+}
+
+.drinks {
+    background-image: url(./drinks.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 25px;
+    height: 270px;
+    width: 203px;
+}
+
+.drinks2 {
+    background-image: url(./drinks2.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 25px;
+    height: 270px;
+    width: 180px;
+}
+
+.card.special {
+    display: grid;
+    grid-template: 3fr 1fr 2fr / 1fr;
+}
+
+.card.special p {
+    background: none;
+    color: #f5deb3;
+    margin: 0;
+    text-align: center;
+    padding: 0;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+.card.special h3 {
+    background: none;
+    color: #f5deb3;
+    font-size: 1.3em;
+    text-decoration: underline;
+}
+
+.specialty {
+    background-image: url(./specialty.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 200px;
+    width: 300px;
+}
+
+.card > :first-child:is(.specialty) + h3 + p {
+    color: white;
+}
+
+.card.special.second {
+    display: grid;
+    grid-template: 3fr repeat(4, 1fr) / 1fr;
+}
+
+.specialty2 {
+    background-image: url(./specialty2.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 200px;
+    width: 300px;
+}
+
+
+/* .specialty {
+    background-image: url(./specialty.jpg);
+    grid-column: 1 / 3;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 25px;
+    height: 207px;
+    width: 310px;
+    align-self: baseline;
+    margin: 20px 0 0;
+}
+
+
+.card > :nth-child(2):is(p) {
+    background: none;
+    color: #f5deb3;
+    font-size: calc(14px + 0.7vw);
+    margin: 0;
+    text-align: center;
+    text-decoration: underline;
+    grid-column: 1 / 3;
+    padding: 0;
+    margin-top: -45px;
+}
+
+.card > :nth-child(3):is(p) {
+    background: none;
+    color: #ffffff;
+    font-size: calc(12px + 0.2vw);
+    margin: 0;
+    text-align: center;
+    grid-column: 1 / 3;
+    padding: 0;
+    width: 400px;
+    margin-bottom: 10px;
+}
+
+.card > :first-child:is(.specialty2) + p {
+    margin-bottom: 60px;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+.card > :first-child:is(.specialty2) + p + p {
+    background: none;
+    color: #f5deb3;
+    margin: 0;
+    text-align: center;
+    grid-column: 1 / 3;
+    padding: 0;
+    margin-top: -45px;
+    margin-bottom: 45px;
+    text-decoration: none;
+    font-size: 1.1em;
+    width: auto;
+}
+
+.card > :first-child:is(.specialty2) + p + p + p {
+    background: none;
+    color: #f5deb3;
+    margin: 0;
+    text-align: center;
+    grid-column: 1 / 3;
+    padding: 0;
+    margin-top: -45px;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+.specialty2 {
+    background-image: url(./specialty2.jpg);
+    grid-column: 1 / 3;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 25px;
+    height: 207px;
+    width: 276px;
+    align-self: baseline;
+    margin: 20px 0 0;
+} */
+
+
+/* FOOTER STYLING */
 .footer {
     display: flex;
     font-size: 10px;
@@ -184,3 +398,5 @@ tr {
 .footer a {
     text-decoration: none;
 }
+
+
