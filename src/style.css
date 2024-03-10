@@ -264,23 +264,27 @@ h6 {
     font-size: 1.1em;
 }
 
+.specialty {
+    margin-top: 10px;
+    background-image: url(./specialty.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 25px;
+    height: 200px;
+    width: 300px;
+}
+
 .card.special h3 {
     background: none;
     color: #f5deb3;
     font-size: 1.3em;
     text-decoration: underline;
-}
-
-.specialty {
-    background-image: url(./specialty.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 200px;
-    width: 300px;
+    padding-bottom: 0;
 }
 
 .card > :first-child:is(.specialty) + h3 + p {
     color: white;
+    margin-bottom: 10px;
 }
 
 .card.special.second {
@@ -289,95 +293,14 @@ h6 {
 }
 
 .specialty2 {
+    margin-top: 10px;
     background-image: url(./specialty2.jpg);
     background-size: contain;
     background-repeat: no-repeat;
+    border-radius: 25px;
     height: 200px;
-    width: 300px;
+    width: 267px;
 }
-
-
-/* .specialty {
-    background-image: url(./specialty.jpg);
-    grid-column: 1 / 3;
-    background-size: contain;
-    background-repeat: no-repeat;
-    border-radius: 25px;
-    height: 207px;
-    width: 310px;
-    align-self: baseline;
-    margin: 20px 0 0;
-}
-
-
-.card > :nth-child(2):is(p) {
-    background: none;
-    color: #f5deb3;
-    font-size: calc(14px + 0.7vw);
-    margin: 0;
-    text-align: center;
-    text-decoration: underline;
-    grid-column: 1 / 3;
-    padding: 0;
-    margin-top: -45px;
-}
-
-.card > :nth-child(3):is(p) {
-    background: none;
-    color: #ffffff;
-    font-size: calc(12px + 0.2vw);
-    margin: 0;
-    text-align: center;
-    grid-column: 1 / 3;
-    padding: 0;
-    width: 400px;
-    margin-bottom: 10px;
-}
-
-.card > :first-child:is(.specialty2) + p {
-    margin-bottom: 60px;
-    text-decoration: none;
-    font-size: 1.1em;
-}
-
-.card > :first-child:is(.specialty2) + p + p {
-    background: none;
-    color: #f5deb3;
-    margin: 0;
-    text-align: center;
-    grid-column: 1 / 3;
-    padding: 0;
-    margin-top: -45px;
-    margin-bottom: 45px;
-    text-decoration: none;
-    font-size: 1.1em;
-    width: auto;
-}
-
-.card > :first-child:is(.specialty2) + p + p + p {
-    background: none;
-    color: #f5deb3;
-    margin: 0;
-    text-align: center;
-    grid-column: 1 / 3;
-    padding: 0;
-    margin-top: -45px;
-    text-decoration: none;
-    font-size: 1.1em;
-}
-
-.specialty2 {
-    background-image: url(./specialty2.jpg);
-    grid-column: 1 / 3;
-    background-size: contain;
-    background-repeat: no-repeat;
-    border-radius: 25px;
-    height: 207px;
-    width: 276px;
-    align-self: baseline;
-    margin: 20px 0 0;
-} */
-
 
 /* FOOTER STYLING */
 .footer {
