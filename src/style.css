@@ -231,6 +231,7 @@ h6 {
     height: 25px;
 }
 
+/* MENU DRINKS */
 .drinks {
     background-image: url(./drinks.jpg);
     background-size: contain;
@@ -249,6 +250,7 @@ h6 {
     width: 180px;
 }
 
+/* MENU SPECIALS */
 .card.special {
     display: grid;
     grid-template: 3fr 1fr 2fr / 1fr;
@@ -301,6 +303,41 @@ h6 {
     height: 200px;
     width: 267px;
 }
+
+
+/* MENU DESSERTS */
+.cake {
+    background-image: url(./cake.jpeg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 25px;
+    height: 277px;
+    width: 185px;
+}
+
+.card.dessert {
+    grid-template: 1fr / 215px 1fr;
+}
+
+.cake + ul li {
+    margin-bottom: 20px;
+}
+
+.card.dessert2 {
+    display: grid;
+    grid-template: 3fr 1fr / 1fr;
+}
+
+.scones {
+    background-image: url(./scones.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 25px;
+    height: 293px;
+    width: 390px;
+    margin-top: 10px;
+}
+
 
 /* FOOTER STYLING */
 .footer {
