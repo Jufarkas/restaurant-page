@@ -161,7 +161,8 @@ export function createMenu() {
     });
 
 
-    //column3 cards
+    //column3
+    //CARD 5
     let item5 = document.createElement('div');
     item5.classList.add('item5');
     let item6 = document.createElement('div');
@@ -170,4 +171,49 @@ export function createMenu() {
     column3.appendChild(item5);
     column3.appendChild(item6);
 
+    let dessertsH3 = document.createElement('h3');
+    dessertsH3.textContent = "Desserts";
+    item5.appendChild(dessertsH3);
+
+    let dessertCard1 = document.createElement('div');
+    dessertCard1.classList.add('card', 'dessert');
+    item5.appendChild(dessertCard1);
+
+    let cakeImg = document.createElement('div');
+    cakeImg.classList.add('cake');
+    dessertCard1.appendChild(cakeImg);
+
+    let dessertList = document.createElement('ul');
+    dessertCard1.appendChild(dessertList);
+    
+    let desserts = [
+        {item: "Black Forest Cube - $4.49"},
+        {item: "Cheesecake Slice - $2.49"},
+        {item: "Super cookies - $1.49ea"},
+    ];
+
+    desserts.forEach((dessert) => {
+        let dessertItem = document.createElement('li');
+        dessertItem.textContent = dessert.item;
+        dessertList.appendChild(dessertItem);
+    });
+
+    //CARD 6
+    let dessertsCont = document.createElement('h6');
+    dessertsCont.textContent = "Desserts cont.";
+    item6.appendChild(dessertsCont);
+
+    let dessertCard2 = document.createElement('div');
+    dessertCard2.classList.add('card', 'dessert2');
+    item6.appendChild(dessertCard2);
+
+    let sconesImg = document.createElement('div');
+    sconesImg.classList.add('scones');
+    dessertCard2.appendChild(sconesImg);
+
+    let dessertList2 = document.createElement('ul');
+    dessertCard2.appendChild(dessertList2);
+    let dessertList2Item = document.createElement('li');
+    dessertList2Item.textContent = "Scones; baked fresh daily - $2.55 - $3.00";
+    dessertList2.appendChild(dessertList2Item);
 }
