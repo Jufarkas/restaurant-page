@@ -28,7 +28,8 @@ export function createMenu() {
     menu.appendChild(column2);
     menu.appendChild(column3);
 
-    //column1 cards
+    //column1
+    //CARD 1
     let item1 = document.createElement('div');
     item1.classList.add('item1');
     let item2 = document.createElement('div');
@@ -68,8 +69,42 @@ export function createMenu() {
         drinksList.appendChild(listItem);
     })
 
+    //column1
+    //CARD 2
+    let beveragesCont = document.createElement('h6');
+    beveragesCont.textContent = "Beverages cont.";
+    
+    let bevCard2 = document.createElement('div');
+    bevCard2.classList.add('card');
+    item2.appendChild(beveragesCont);
+    item2.appendChild(bevCard2);
+      
+    let drinksList2 = document.createElement('ul');
+    bevCard2.appendChild(drinksList2);
 
-    //column2 cards
+    let list2 = [
+        {item: 'Various Teas - $1.49'},
+        {item: 'London Fog - $2.00'},
+        {item: 'Mocha - $3.49'},
+        {item: 'Matcha Latte - $5.49'},
+        {item: 'Con panna - $5.49'},
+        {item: 'And more in-house!'},
+    ];
+
+    list2.forEach((item) => {
+        let listItem2 = document.createElement('li');
+        listItem2.textContent = item.item;
+        drinksList2.appendChild(listItem2);
+    })
+    
+
+    let drinksPicture2 = document.createElement('div');
+    drinksPicture2.classList.add('drinks');
+    bevCard2.appendChild(drinksPicture2);
+
+
+    //column2
+    //CARD 3
     let item3 = document.createElement('div');
     item3.classList.add('item3');
     let item4 = document.createElement('div');
@@ -78,8 +113,54 @@ export function createMenu() {
     column2.appendChild(item3);
     column2.appendChild(item4);
 
-
+    let specialtiesH3 = document.createElement('h3');
+    specialtiesH3.textContent = "Specialties";
+    item3.appendChild(specialtiesH3);
     
+    let specialCard = document.createElement('div');
+    specialCard.classList.add('card', 'special');
+    item3.appendChild(specialCard);
+    
+    let specialtyImg = document.createElement('div');
+    specialtyImg.classList.add('specialty');
+    specialCard.appendChild(specialtyImg);
+    
+    let specialCardH3 = document.createElement('h3');
+    specialCardH3.textContent = "Signature English Breakfast";
+    specialCard.appendChild(specialCardH3);
+    
+    let specialPara1 = document.createElement('p');
+    specialPara1.textContent = "Savor the delicious combo of crispy bacon, savory sausage, perfectly cooked eggs, baked beans, and your choice of toast. Add a side of grilled tomatoes or mushrooms for the ultimate experience. - $14.49";
+    specialCard.appendChild(specialPara1);
+
+    //column2
+    //CARD 4
+    let specialtiesH6 = document.createElement('h6');
+    specialtiesH6.textContent = "Specialties cont.";
+    item4.appendChild(specialtiesH6);
+
+    let specialtiesCard2 = document.createElement('div');
+    specialtiesCard2.classList.add('card', 'special', 'second');
+    item4.appendChild(specialtiesCard2);
+
+    let specialtyImg2 = document.createElement('div');
+    specialtyImg2.classList.add('specialty2');
+    specialtiesCard2.appendChild(specialtyImg2);
+
+    let specialContPara = [
+        {item: "Ham & Cheese Croissant; choice of 2 sides - $13.49"},
+        {item: "Bacon n' Egg Bowl w/ hasbrowns and toast - $12.49"},
+        {item: "Farmer's Breakfast; includes 1 Dessert - $14.49"},
+        {item: "Quick to-go options always available in-house!"},
+    ]; 
+
+    specialContPara.forEach((item) =>{
+        let para = document.createElement('p');
+        para.textContent = item.item;
+        specialtiesCard2.appendChild(para);
+    });
+
+
     //column3 cards
     let item5 = document.createElement('div');
     item5.classList.add('item5');
