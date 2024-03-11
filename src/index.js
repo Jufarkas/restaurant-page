@@ -1,28 +1,29 @@
 import './style.css';
 
-const mainBody = document.querySelector('body');
+import { createMenu } from './menu';
 
-// element creators
-const newDiv = document.createElement('div');
-const nav = document.createElement('nav');
-const header1 = document.createElement('h1');
-const header3 = document.createElement('h3');
+const mainBody = document.querySelector('body');
+const mainContainer = document.createElement('div');
 
 export function createHeader() {
-    const headerContainer = newDiv;
-    headerContainer.classList.add('header');
-    mainBody.appendChild(headerContainer);
+    mainContainer.classList.add('mainContainer');
+    mainBody.appendChild(mainContainer);
 
-    let h1 = header1;
+
+    const headerContainer = document.createElement('div');
+    headerContainer.classList.add('header');
+    mainContainer.appendChild(headerContainer);
+
+    let h1 = document.createElement('h1');
     h1.textContent = "- Welcome to The Homebrew Cafe -";
     headerContainer.appendChild(h1);
 
-    let h3 = header3;
+    let h3 = document.createElement('h3');
     h3.textContent = "All of your delicious home brew needs. Available in-house, or on the go!";
     headerContainer.appendChild(h3);
 
-    const headerNav = nav;
-    headerContainer.appendChild(nav);
+    const headerNav = document.createElement('nav');
+    headerContainer.appendChild(headerNav);
 
     const homeBtn = document.createElement('button');
     headerNav.appendChild(homeBtn);
@@ -50,7 +51,7 @@ function createContent(){
     // Create content DIV (access with content variable)
     let content = document.createElement('div');
     content.classList.add('content');
-    mainBody.appendChild(content);
+    mainContainer.appendChild(content);
     
     // Create into para
     let intro = document.createElement('div');
@@ -122,10 +123,10 @@ createContent();
 function createFooter(){
     let footer = document.createElement('div');
     footer.classList.add('footer');
-    mainBody.appendChild(footer);
+    mainContainer.appendChild(footer);
 
     let footerPara = document.createElement('p');
-    let text1 = document.createTextNode("Photo by ");
+    let text1 = document.createTextNode("Photos by ");
     let text2 = document.createTextNode(" on ");
 
     let footerA1 = document.createElement('a');
@@ -144,3 +145,16 @@ function createFooter(){
 };
 
 createFooter();
+
+const headerBtns = document.querySelectorAll('button');
+headerBtns.forEach((button) => {
+    button.addEventListener('click', (e) => {
+        if (e.target.textContent === "Home"){
+            return;
+        } else if (e.target.textContent === "Menu"){
+            createMenu();
+        } else if (e.target.textContent === "Contact"){
+            return;
+        }
+    });
+});
