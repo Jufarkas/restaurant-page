@@ -338,6 +338,52 @@ h6 {
     margin-top: 10px;
 }
 
+.scones + ul {
+    padding: 0;
+}
+
+
+
+/* CONTACT PAGE */
+
+.contactInfo {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.contact.card {
+    background-image: url(./contact.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 666px;
+    width: 440px;
+    display: grid;
+    grid-template: repeat(6, 50px) / 1fr;
+    justify-items: start;
+    align-items: start;
+}
+
+.contact.card h3 {
+    justify-self: center;
+    height: 25px;
+    width: 440px;
+    padding: 5px 0 5px 0;
+    font-size: 1.5em;
+}
+
+.contact.card h6 {
+    background: none;
+    color: #f5deb3;
+    font-size: 1.8em;
+}
+
+.contact.card p {
+    background-image: none;
+    padding: 0 0 0 17px;
+    font-size: 1.3em;
+    text-align: start;
+}
 
 /* FOOTER STYLING */
 .footer {
