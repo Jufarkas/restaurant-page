@@ -1,6 +1,7 @@
 import './style.css';
 
 import { createMenu } from './menu';
+import { createContactCard } from './contact';
 
 const mainBody = document.querySelector('body');
 const mainContainer = document.createElement('div');
@@ -149,12 +150,52 @@ createFooter();
 const headerBtns = document.querySelectorAll('button');
 headerBtns.forEach((button) => {
     button.addEventListener('click', (e) => {
-        if (e.target.textContent === "Home"){
-            return;
-        } else if (e.target.textContent === "Menu"){
-            createMenu();
-        } else if (e.target.textContent === "Contact"){
-            return;
-        }
+        let footer = document.querySelector('.footer');
+        let allDivs = document.querySelectorAll('div');
+        allDivs.forEach((div) => {
+            if (e.target.classList.contains('home')){
+                if (div.classList.contains('content')){
+                    return;
+                } else if (div.classList.contains('menuContainer')){
+                    footer.remove();
+                    div.remove();
+                    createContent();
+                    createFooter();
+                } else if (div.classList.contains('contactInfo')){
+                    footer.remove();
+                    div.remove();
+                    createContent();
+                    createFooter();
+                }
+            } else if (e.target.classList.contains('menu')){
+                if (div.classList.contains('menuContainer')){
+                    return;
+                } else if (div.classList.contains('content')){
+                    footer.remove();
+                    div.remove();
+                    createMenu();
+                    createFooter();
+                } else if (div.classList.contains('contactInfo')){
+                    footer.remove();
+                    div.remove();
+                    createMenu();
+                    createFooter();
+                }
+            } else if (e.target.textContent === "Contact"){
+                if (div.classList.contains('contactInfo')){
+                    return;
+                } else if (div.classList.contains('menuContainer')){
+                    footer.remove();
+                    div.remove();
+                    createContactCard();
+                    createFooter();
+                } else if (div.classList.contains('content')){
+                    footer.remove();
+                    div.remove();
+                    createContactCard();
+                    createFooter();
+                }
+            }
+        });
     });
 });
