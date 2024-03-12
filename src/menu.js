@@ -1,22 +1,17 @@
 import './style.css';
 
 export function createMenu() {
-    //delete .content div (Home page info) && add new div w/ 'menuContainer' class
+    //add new div w/ 'menuContainer' class
     //
-    // WILL NEED TO ADD AN IF STATEMENT TO THE BELOW TO CHECK:
-    // IF (.content *exists*) => remove and proceed
-    // IF (.contact *exists*) => remove and proceed
     //
     const mainContainer = document.querySelector('.mainContainer');
     const footer = document.querySelector('.footer');
-    let content = document.querySelector('.content');
-    content.remove();
     
     let menu = document.createElement('div');
     menu.classList.add('menuContainer');
     mainContainer.insertBefore(menu, footer)
 
-    //After deleting .content or .contact, add card columns
+    //add card columns
 
     let column1 = document.createElement('div');
     column1.classList.add('cardColumn');
