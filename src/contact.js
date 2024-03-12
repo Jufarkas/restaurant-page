@@ -36,10 +36,9 @@ export function createContactCard(){
 
     // address
     let addressHeader = document.createElement('h6');
-    addressHeader.textContent = "Email:";
+    addressHeader.textContent = "Address:";
     contactCard.appendChild(addressHeader);
     let addressPara = document.createElement('p');
-    let lineBreak = document.createElement('BR');
     addressPara.innerText = "#8 - 1812\nBelmont Drive,\nPleasantville, CO";
     contactCard.appendChild(addressPara); 
 }
